@@ -2,16 +2,15 @@
 
 export  interface UserInfo {
     name: string;
-    username: string;
-    avatarImage: string | undefined;
-    link: string;
+    login: string;
+    avatar_url: string | undefined;
+    html_url: string;
 }
 
 export interface UserRepository {
-    repositoryName: string;
-    githubLink: string;
+    name: string;
+    html_url: string;
     description?: string;
     language: string;
-    lastUpdate: string;
-    githubPagesUrl: string;
+    updated_at: string;
 }

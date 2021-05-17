@@ -1,3 +1,4 @@
+import GitHubUserSummary from './GitHubUserSummary';
 import './UserLookup.css';
 
 
@@ -12,6 +13,7 @@ export function UserLookup() {
                 </label>
                 <button type="submit">Show User</button>
             </form>
+            <GitHubUserSummary username="dairsmithgit"/>
         </div>
     )
 }
