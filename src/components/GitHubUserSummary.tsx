@@ -1,5 +1,15 @@
+import { UserInfo, UserRepository } from '../model/github-model';
+import { fetchUserProfile, fetchUserRepository } from '../service/GitHubApiService';
+import { useState, useEffect } from 'react';
+
+export function GitHubUserSummary() {
 
 
-export function todo() {
-    // placeholder to get app to compile
+    return (
+        <div className="GitHubUserSummary">
+
+        </div>
+    )
 }
+
+export default GitHubUserSummary;
