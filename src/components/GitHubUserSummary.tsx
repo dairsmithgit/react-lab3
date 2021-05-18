@@ -17,8 +17,6 @@ export function GitHubUserSummary({ username }: Props) {
         });
     }, [selectUsername]);
 
-console.log(userProfile);
-
     return (
         <div className="GitHubUserSummary">
             {userProfile ? 
