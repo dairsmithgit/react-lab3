@@ -17,14 +17,21 @@ export function Repository({ username }: Props) {
         });
     }, [selectUsername]);
 
+console.log(userRepository); //the fetch is working but unable to see elements below
+
     return (
         <div className="Repository">
             {userRepository ? 
             <div className="UserRepository">
-
+                <p>{userRepository.name}</p>
+                <p>{userRepository.description}</p>
+                <p>Language: {userRepository.language}</p>
+                <p>Last Updated {userRepository.updated_at}</p>
             </div> :
             <p>No repositories with that username found</p>
         }
         </div>
     )
 }
+
+export default Repository;
