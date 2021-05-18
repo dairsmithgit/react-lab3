@@ -3,30 +3,24 @@ import { fetchUserProfile, fetchUserRepository } from '../service/GitHubApiServi
 import { useState, useEffect } from 'react';
 
 interface Props {
-    username: string;
+    repo: UserRepository;
 }
 
-export function Repository({ username }: Props) {
+export function Repository({ repo }: Props) {
 
     const [ selectUsername, setUsername ] = useState("");
-    const [ userRepository, setRepository ] = useState<UserRepository | null>(null);
-
-    useEffect(() => {
-        fetchUserRepository(username).then(data => {
-            setRepository(data);
-        });
-    }, [selectUsername]);
+    const [ repos, setRepos ] = useState<UserRepository | null>(null);
 
     //the fetch is working but unable to see elements below
 
     return (
         <div className="Repository">
-            {userRepository ? 
+            {repo ? 
             <div className="UserRepository">
-                <p>{userRepository.name}</p>
-                <p>{userRepository.description}</p>
-                <p>Language: {userRepository.language}</p>
-                <p>Last Updated {userRepository.pushed_at}</p>
+                <p>{repo.name}</p>
+                <p>{repo.description}</p>
+                <p>Language: {repo.language}</p>
+                <p>Last Updated {repo.pushed_at}</p>
             </div> :
             <p>No repositories with that username found</p>
         }
