@@ -17,7 +17,7 @@ export function Repository({ username }: Props) {
         });
     }, [selectUsername]);
 
-console.log(userRepository); //the fetch is working but unable to see elements below
+    //the fetch is working but unable to see elements below
 
     return (
         <div className="Repository">
