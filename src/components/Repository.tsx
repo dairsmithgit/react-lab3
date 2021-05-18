@@ -1,5 +1,5 @@
 import { UserRepository } from '../model/github-model';
-import { fetchUserRepository } from '../service/GitHubApiService';
+import { fetchUserProfile, fetchUserRepository } from '../service/GitHubApiService';
 import { useState, useEffect } from 'react';
 
 interface Props {
@@ -16,4 +16,15 @@ export function Repository({ username }: Props) {
             setRepository(data);
         });
     }, [selectUsername]);
+
+    return (
+        <div className="Repository">
+            {userRepository ? 
+            <div className="UserRepository">
+
+            </div> :
+            <p>No repositories with that username found</p>
+        }
+        </div>
+    )
 }

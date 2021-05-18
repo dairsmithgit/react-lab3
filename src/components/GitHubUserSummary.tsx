@@ -21,7 +21,7 @@ export function GitHubUserSummary({ username }: Props) {
         <div className="GitHubUserSummary">
             {userProfile ? 
                     <div className="UserProfile">
-                        <p>{userProfile.name} ({userProfile.login})</p> 
+                        <h2>{userProfile.name} ({userProfile.login})</h2> 
                         <img src={userProfile.avatar_url}></img>
                         <p>{userProfile.html_url}</p>
                         </div> : 
