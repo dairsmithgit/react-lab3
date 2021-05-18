@@ -26,7 +26,7 @@ export function Repository({ username }: Props) {
                 <p>{userRepository.name}</p>
                 <p>{userRepository.description}</p>
                 <p>Language: {userRepository.language}</p>
-                <p>Last Updated {userRepository.updated_at}</p>
+                <p>Last Updated {userRepository.pushed_at}</p>
             </div> :
             <p>No repositories with that username found</p>
         }
