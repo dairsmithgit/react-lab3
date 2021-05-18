@@ -1,0 +1,22 @@
+.UserLookup {
+    color: #d9d9d9;
+    background-color: black;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    margin: 4px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin: 0px 8px;
+    align-self: bottom;
+}

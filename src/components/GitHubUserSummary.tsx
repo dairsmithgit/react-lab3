@@ -1,3 +1,4 @@
+import './GitHubUserSummary.css';
 import { UserInfo, UserRepository } from '../model/github-model';
 import { fetchUserProfile, fetchUserRepository } from '../service/GitHubApiService';
 import { useState, useEffect } from 'react';
@@ -23,7 +24,7 @@ export function GitHubUserSummary({ username }: Props) {
                     <div className="UserProfile">
                         <h2>{userProfile.name} ({userProfile.login})</h2> 
                         <img src={userProfile.avatar_url}></img>
-                        <p>{userProfile.html_url}</p>
+                        <a href={userProfile.html_url}>View their GitHub Homepage</a>
                         </div> : 
                         <p>No user with username found</p>
         }
