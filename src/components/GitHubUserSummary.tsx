@@ -23,7 +23,7 @@ console.log(userProfile);
         <div className="GitHubUserSummary">
             {userProfile ? 
                     <div className="UserProfile">
-                        <p>The {userProfile.name} ({userProfile.login})</p> 
+                        <p>{userProfile.name} ({userProfile.login})</p> 
                         <img src={userProfile.avatar_url}></img>
                         <p>{userProfile.html_url}</p>
                         </div> : 
